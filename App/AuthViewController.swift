@@ -25,6 +25,12 @@ class AuthViewController: UIViewController, UITextFieldDelegate
     }
 }
 
+// MARK: - Network manager
+extension AuthViewController
+{
+    
+}
+
 // MARK: - App name configurator
 extension AuthViewController
 {
