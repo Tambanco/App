@@ -69,6 +69,7 @@ extension AuthViewController
             loginTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: loginTextField.frame.height))
             loginTextField.leftViewMode = .always
             loginTextField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            loginTextField.clearButtonMode = .whileEditing
             loginTextField.layer.borderWidth = 2
             loginTextField.layer.cornerRadius = cornerRadius
             loginTextField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
@@ -82,6 +83,8 @@ extension AuthViewController
             passwordTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: loginTextField.frame.height))
             passwordTextField.leftViewMode = .always
             passwordTextField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            passwordTextField.clearButtonMode = .whileEditing
+            passwordTextField.isSecureTextEntry = true
             passwordTextField.layer.borderWidth = 2
             passwordTextField.layer.cornerRadius = cornerRadius
             passwordTextField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
