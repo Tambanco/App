@@ -18,6 +18,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate
     {
         super.viewDidLoad()
         
+        configureAppName()
         configureImage()
         configureLabels()
         configureButtons()
@@ -29,11 +30,16 @@ extension AuthViewController
 {
     func configureAppName()
     {
-        let appName = UILabel(frame: CGRect(x: 20, y: 50, width: 100, height: 50))
+        let appName = UILabel(frame: CGRect(x: 150, y: 100, width: 100, height: 50))
         appName.text = "App"
-        //appName.font = UIFont(name: <#T##String#>, size: <#T##CGFloat#>)
+        appName.textColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
+        appName.font = UIFont(name: "Helvetica Neue", size: 40)
+        appName.font = UIFont.boldSystemFont(ofSize: 40)
+        appName.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        self.view.addSubview(appName)
     }
 }
+
 // MARK: - Image configurator
 extension AuthViewController
 {
@@ -66,6 +72,9 @@ extension AuthViewController
             loginTextField.layer.borderWidth = 2
             loginTextField.layer.cornerRadius = cornerRadius
             loginTextField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
+            loginTextField.layer.shadowOpacity = 1
+            loginTextField.layer.shadowRadius = 4.0
+            loginTextField.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         self.view.addSubview(loginTextField)
         
         let passwordTextField = UITextField(frame: CGRect(x: 20, y: heightOfView - 200, width: widthOfElement, height: heightOfElement))
@@ -76,6 +85,9 @@ extension AuthViewController
             passwordTextField.layer.borderWidth = 2
             passwordTextField.layer.cornerRadius = cornerRadius
             passwordTextField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
+            passwordTextField.layer.shadowOpacity = 1
+            passwordTextField.layer.shadowRadius = 4.0
+            passwordTextField.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         self.view.addSubview(passwordTextField)
     }
 }
@@ -95,6 +107,9 @@ extension AuthViewController
             loginButton.setTitle("Login", for: .normal)
             loginButton.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
             loginButton.layer.cornerRadius = cornerRadius
+            loginButton.layer.shadowOpacity = 1
+            loginButton.layer.shadowRadius = 4.0
+            loginButton.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         self.view.addSubview(loginButton)
     }
 }
