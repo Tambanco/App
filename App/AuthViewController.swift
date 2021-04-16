@@ -36,6 +36,8 @@ extension AuthViewController
         appName.font = UIFont(name: "Helvetica Neue", size: 40)
         appName.font = UIFont.boldSystemFont(ofSize: 40)
         appName.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        
+        elementAnimator(appName)
         self.view.addSubview(appName)
     }
 }
@@ -76,6 +78,8 @@ extension AuthViewController
             loginTextField.layer.shadowOpacity = 1
             loginTextField.layer.shadowRadius = 4.0
             loginTextField.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        
+            elementAnimator(loginTextField)
         self.view.addSubview(loginTextField)
         
         let passwordTextField = UITextField(frame: CGRect(x: 20, y: heightOfView - 200, width: widthOfElement, height: heightOfElement))
@@ -91,6 +95,8 @@ extension AuthViewController
             passwordTextField.layer.shadowOpacity = 1
             passwordTextField.layer.shadowRadius = 4.0
             passwordTextField.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        
+            elementAnimator(passwordTextField)
         self.view.addSubview(passwordTextField)
     }
 }
@@ -113,6 +119,28 @@ extension AuthViewController
             loginButton.layer.shadowOpacity = 1
             loginButton.layer.shadowRadius = 4.0
             loginButton.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            loginButton.addTarget(self, action: #selector(self.buttonTapped), for: .touchUpInside)
+
+            elementAnimator(loginButton)
         self.view.addSubview(loginButton)
     }
+    
+    @objc func buttonTapped(sender : UIButton)
+    {
+        print("buttonPressed")
+    }
+}
+
+// MARK: - Animation methods
+extension AuthViewController
+{
+    func elementAnimator(_ element: UIView)
+    {
+        element.transform = CGAffineTransform.init(scaleX: 0.6, y: 0.6)
+        UIView.animate(withDuration: 0.3)
+        {
+            element.transform = CGAffineTransform.init(scaleX: 1, y: 1)
+        }
+    }
+    
 }

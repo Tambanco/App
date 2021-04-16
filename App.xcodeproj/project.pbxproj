@@ -13,6 +13,8 @@
 		494F2B682629E7C90068AF0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B662629E7C90068AF0A /* Main.storyboard */; };
 		494F2B6A2629E7C90068AF0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B692629E7C90068AF0A /* Assets.xcassets */; };
 		494F2B6D2629E7C90068AF0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B6B2629E7C90068AF0A /* LaunchScreen.storyboard */; };
+		494F2B78262A0EED0068AF0A /* PaymentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F2B76262A0EED0068AF0A /* PaymentListViewController.swift */; };
+		494F2B79262A0EED0068AF0A /* PaymentListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B77262A0EED0068AF0A /* PaymentListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		494F2B692629E7C90068AF0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		494F2B6C2629E7C90068AF0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494F2B6E2629E7C90068AF0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		494F2B76262A0EED0068AF0A /* PaymentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListViewController.swift; sourceTree = "<group>"; };
+		494F2B77262A0EED0068AF0A /* PaymentListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				494F2B602629E7C90068AF0A /* AppDelegate.swift */,
 				494F2B622629E7C90068AF0A /* SceneDelegate.swift */,
 				494F2B642629E7C90068AF0A /* AuthViewController.swift */,
+				494F2B76262A0EED0068AF0A /* PaymentListViewController.swift */,
 				494F2B662629E7C90068AF0A /* Main.storyboard */,
 				494F2B692629E7C90068AF0A /* Assets.xcassets */,
 				494F2B6B2629E7C90068AF0A /* LaunchScreen.storyboard */,
 				494F2B6E2629E7C90068AF0A /* Info.plist */,
+				494F2B77262A0EED0068AF0A /* PaymentListViewController.xib */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 				494F2B6D2629E7C90068AF0A /* LaunchScreen.storyboard in Resources */,
 				494F2B6A2629E7C90068AF0A /* Assets.xcassets in Resources */,
 				494F2B682629E7C90068AF0A /* Main.storyboard in Resources */,
+				494F2B79262A0EED0068AF0A /* PaymentListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +147,7 @@
 				494F2B652629E7C90068AF0A /* AuthViewController.swift in Sources */,
 				494F2B612629E7C90068AF0A /* AppDelegate.swift in Sources */,
 				494F2B632629E7C90068AF0A /* SceneDelegate.swift in Sources */,
+				494F2B78262A0EED0068AF0A /* PaymentListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
