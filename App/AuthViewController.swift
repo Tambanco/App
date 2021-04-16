@@ -67,7 +67,7 @@ extension AuthViewController
         let cornerRadius: CGFloat = 10
         
         let loginTextField = UITextField(frame: CGRect(x: 20, y: heightOfView - 260, width: widthOfElement, height: heightOfElement))
-            loginTextField.placeholder = "Enter your login here"
+            loginTextField.placeholder = "Enter login here"
             loginTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: loginTextField.frame.height))
             loginTextField.leftViewMode = .always
             loginTextField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -83,7 +83,7 @@ extension AuthViewController
         self.view.addSubview(loginTextField)
         
         let passwordTextField = UITextField(frame: CGRect(x: 20, y: heightOfView - 200, width: widthOfElement, height: heightOfElement))
-            passwordTextField.placeholder = "Enter your password here"
+            passwordTextField.placeholder = "Enter password here"
             passwordTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: loginTextField.frame.height))
             passwordTextField.leftViewMode = .always
             passwordTextField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -127,7 +127,7 @@ extension AuthViewController
     
     @objc func buttonTapped(sender : UIButton)
     {
-        print("buttonPressed")
+        flashButton(sender)
     }
 }
 
@@ -143,4 +143,15 @@ extension AuthViewController
         }
     }
     
+    func flashButton(_ button: UIButton)
+    {
+        let flash = CABasicAnimation(keyPath: "opacity")
+        flash.duration = 0.10
+        flash.fromValue = 1
+        flash.toValue = 0.1
+        flash.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        flash.autoreverses = true
+        flash.repeatCount = 1
+        button.layer.add(flash, forKey: nil)
+    }
 }
