@@ -18,6 +18,9 @@ class AuthViewController: UIViewController, UITextFieldDelegate
     {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         configureAppName()
         configureImage()
         configureLabels()
@@ -25,7 +28,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate
     }
 }
 
-// MARK: - Networking managers
+    // MARK: - Networking managers
 extension AuthViewController
 {
     func makeGetRequest(url: String)
@@ -85,7 +88,7 @@ extension AuthViewController
     }
 }
 
-// MARK: - App name configurator
+    // MARK: - App name configurator
 extension AuthViewController
 {
     func configureAppName()
@@ -94,7 +97,6 @@ extension AuthViewController
         appName.text = "App"
         appName.textColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
         appName.font = UIFont(name: "Helvetica Neue", size: 40)
-        appName.font = UIFont.boldSystemFont(ofSize: 40)
         appName.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         
         elementAnimator(appName)
@@ -102,7 +104,7 @@ extension AuthViewController
     }
 }
 
-// MARK: - Image configurator
+    // MARK: - Image configurator
 extension AuthViewController
 {
     func configureImage()
@@ -115,7 +117,7 @@ extension AuthViewController
     }
 }
 
-// MARK: - Label configurator
+    // MARK: - Label configurator
 extension AuthViewController
 {
     func configureLabels()
@@ -133,6 +135,7 @@ extension AuthViewController
             loginTextField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             loginTextField.clearButtonMode = .whileEditing
             loginTextField.autocorrectionType = .no
+            loginTextField.keyboardType = .asciiCapable
             loginTextField.layer.borderWidth = 2
             loginTextField.layer.cornerRadius = cornerRadius
             loginTextField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
@@ -149,6 +152,7 @@ extension AuthViewController
             passwordTextField.leftViewMode = .always
             passwordTextField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             passwordTextField.clearButtonMode = .whileEditing
+            passwordTextField.keyboardType = .asciiCapable
             passwordTextField.isSecureTextEntry = true
             passwordTextField.layer.borderWidth = 2
             passwordTextField.layer.cornerRadius = cornerRadius
@@ -162,7 +166,7 @@ extension AuthViewController
     }
 }
 
-// MARK: - Button configurator
+    // MARK: - Button configurator
 extension AuthViewController
 {
     func  configureButtons()
@@ -188,12 +192,13 @@ extension AuthViewController
     
     @objc func buttonTapped(sender : UIButton)
     {
+        self.view.endEditing(true)
         flashButton(sender)
         makePostRequest(url: basicURL)
     }
 }
 
-// MARK: - Animation methods
+    // MARK: - Animation methods
 extension AuthViewController
 {
     func elementAnimator(_ element: UIView)
@@ -217,3 +222,27 @@ extension AuthViewController
         button.layer.add(flash, forKey: nil)
     }
 }
+
+    // MARK: - Dismiss keyboard methods
+extension AuthViewController
+{
+    @objc func keyboardWillShow(notification: NSNotification)
+    {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        {
+            if self.view.frame.origin.y == 0
+            {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification)
+    {
+        if self.view.frame.origin.y != 0
+        {
+            self.view.frame.origin.y = 0
+        }
+    }
+}
+
