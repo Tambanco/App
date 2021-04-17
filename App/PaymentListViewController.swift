@@ -7,12 +7,10 @@
 
 import UIKit
 
-class PaymentListViewController: UIViewController
+class PaymentListViewController: UITableViewController
 {
-
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
     }
 }
