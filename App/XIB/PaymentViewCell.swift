@@ -9,5 +9,9 @@ import UIKit
 
 class PaymentViewCell: UITableViewCell
 {
-
+    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var paymentLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    
 }

@@ -222,7 +222,7 @@ extension AuthViewController
         self.view.endEditing(true)
         flashButton(sender)
         makePostRequest(url: basicURL, login: login, password: password)
-        
+        performSegue(withIdentifier: "goToPaymentList", sender: [])
     }
 }
 
