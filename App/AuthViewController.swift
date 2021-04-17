@@ -77,6 +77,7 @@ extension AuthViewController
             if let response = response
             {
                 print(response)
+                print(login, password)
             }
             
             guard let data = data else {return}
@@ -147,7 +148,7 @@ extension AuthViewController
             loginTextField.layer.shadowOpacity = 1
             loginTextField.layer.shadowRadius = 4.0
             loginTextField.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-            loginTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+            loginTextField.addTarget(self, action: #selector(self.loginTextFieldDidChange(_:)), for: .editingChanged)
         
             elementAnimator(loginTextField)
         self.view.addSubview(loginTextField)
@@ -166,16 +167,35 @@ extension AuthViewController
             passwordTextField.layer.shadowOpacity = 1
             passwordTextField.layer.shadowRadius = 4.0
             passwordTextField.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            passwordTextField.addTarget(self, action: #selector(self.passwordTextFieldDidChange(_:)), for: .editingChanged)
         
             elementAnimator(passwordTextField)
         self.view.addSubview(passwordTextField)
     }
     
     
-    @objc func textFieldDidChange(_ textField: UITextField)
+    @objc func loginTextFieldDidChange(_ textField: UITextField)
     {
-        login = textField.text ?? "empty field"
+        guard textField.text != "" else
+        {
+            return textField.layer.borderColor = #colorLiteral(red: 0.9882510304, green: 0.3398481607, blue: 0.01567719691, alpha: 1)
+        }
+        
+        textField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
+        login = textField.text ?? "text doesn't exist"
     }
+    
+    @objc func  passwordTextFieldDidChange(_ textField: UITextField)
+    {
+        guard textField.text != "" else
+        {
+            return textField.layer.borderColor = #colorLiteral(red: 0.9882510304, green: 0.3398481607, blue: 0.01567719691, alpha: 1)
+        }
+        
+        textField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
+        password = textField.text ?? "text doesn't exist"
+    }
+    
 }
 
     // MARK: - Button configurator
