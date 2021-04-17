@@ -14,6 +14,9 @@ class AuthViewController: UIViewController, UITextFieldDelegate
     var login = ""
     var password = ""
     
+    // MARK: - Outlets
+    
+    
     // MARK: - Life cycle
     override func viewDidLoad()
     {
@@ -40,6 +43,7 @@ extension AuthViewController
             if let response = response
             {
                 print(response)
+                print(self.login)
             }
             
             guard let data = data else {return}
@@ -143,6 +147,7 @@ extension AuthViewController
             loginTextField.layer.shadowOpacity = 1
             loginTextField.layer.shadowRadius = 4.0
             loginTextField.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            loginTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         
             elementAnimator(loginTextField)
         self.view.addSubview(loginTextField)
@@ -164,6 +169,12 @@ extension AuthViewController
         
             elementAnimator(passwordTextField)
         self.view.addSubview(passwordTextField)
+    }
+    
+    
+    @objc func textFieldDidChange(_ textField: UITextField)
+    {
+        login = textField.text ?? "empty field"
     }
 }
 
