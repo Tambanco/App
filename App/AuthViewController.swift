@@ -28,7 +28,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate
 // MARK: - Networking managers
 extension AuthViewController
 {
-    func makeGet(url: String)
+    func makeGetRequest(url: String)
     {
         guard let url = URL(string: url) else {return}
         let session = URLSession.shared
@@ -53,13 +53,14 @@ extension AuthViewController
         } .resume()
     }
     
-    func makePost(url: String)
+    func makePostRequest(url: String)
     {
         guard let url = URL(string: url) else {return}
         let parameters = ["login" : "demo", "password" : "12345"]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.addValue("12345", forHTTPHeaderField: "Authorization")
+        request.addValue("12345", forHTTPHeaderField: "app-key")
+        request.addValue("1", forHTTPHeaderField: "v")
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {return}
         request.httpBody = httpBody
         
@@ -188,7 +189,7 @@ extension AuthViewController
     @objc func buttonTapped(sender : UIButton)
     {
         flashButton(sender)
-        makePost(url: basicURL)
+        makePostRequest(url: basicURL)
     }
 }
 
