@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthViewController: UIViewController, UITextFieldDelegate
+class AuthViewController: UIViewController
 {
     // MARK: - Properties
     let basicURL = "http://82.202.204.94/api-test/"
@@ -222,6 +222,7 @@ extension AuthViewController
         self.view.endEditing(true)
         flashButton(sender)
         makePostRequest(url: basicURL, login: login, password: password)
+        
     }
 }
 

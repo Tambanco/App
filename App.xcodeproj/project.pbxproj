@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		492A9980262B647700F41931 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A997F262B647700F41931 /* PaymentViewController.swift */; };
+		492A9988262B7E5200F41931 /* PaymentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A9986262B7E5200F41931 /* PaymentViewCell.swift */; };
+		492A9989262B7E5200F41931 /* PaymentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492A9987262B7E5200F41931 /* PaymentViewCell.xib */; };
+		492A998D262B7E8F00F41931 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A998C262B7E8F00F41931 /* PaymentViewController.swift */; };
 		494F2B612629E7C90068AF0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F2B602629E7C90068AF0A /* AppDelegate.swift */; };
 		494F2B632629E7C90068AF0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F2B622629E7C90068AF0A /* SceneDelegate.swift */; };
 		494F2B652629E7C90068AF0A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F2B642629E7C90068AF0A /* AuthViewController.swift */; };
 		494F2B682629E7C90068AF0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B662629E7C90068AF0A /* Main.storyboard */; };
 		494F2B6A2629E7C90068AF0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B692629E7C90068AF0A /* Assets.xcassets */; };
 		494F2B6D2629E7C90068AF0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B6B2629E7C90068AF0A /* LaunchScreen.storyboard */; };
-		494F2B78262A0EED0068AF0A /* PaymentListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F2B76262A0EED0068AF0A /* PaymentListViewCell.swift */; };
-		494F2B79262A0EED0068AF0A /* PaymentListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B77262A0EED0068AF0A /* PaymentListViewController.xib */; };
 		6F5F118A7EE5BA52F559CB7A /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37E9022819AE62CD0FA8D79 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		492A997F262B647700F41931 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		492A9986262B7E5200F41931 /* PaymentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewCell.swift; sourceTree = "<group>"; };
+		492A9987262B7E5200F41931 /* PaymentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewCell.xib; sourceTree = "<group>"; };
+		492A998C262B7E8F00F41931 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		494F2B5D2629E7C90068AF0A /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		494F2B602629E7C90068AF0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		494F2B622629E7C90068AF0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,8 +31,6 @@
 		494F2B692629E7C90068AF0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		494F2B6C2629E7C90068AF0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494F2B6E2629E7C90068AF0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		494F2B76262A0EED0068AF0A /* PaymentListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListViewCell.swift; sourceTree = "<group>"; };
-		494F2B77262A0EED0068AF0A /* PaymentListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentListViewController.xib; sourceTree = "<group>"; };
 		5176324B304E70C5DF178EED /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		AE2D215991F60C4B22CC95AD /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		C37E9022819AE62CD0FA8D79 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,11 +57,11 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		492A997D262B625A00F41931 /* XIB */ = {
+		492A998B262B7E5700F41931 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
-				494F2B76262A0EED0068AF0A /* PaymentListViewCell.swift */,
-				494F2B77262A0EED0068AF0A /* PaymentListViewController.xib */,
+				492A9986262B7E5200F41931 /* PaymentViewCell.swift */,
+				492A9987262B7E5200F41931 /* PaymentViewCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -90,9 +90,9 @@
 				494F2B602629E7C90068AF0A /* AppDelegate.swift */,
 				494F2B622629E7C90068AF0A /* SceneDelegate.swift */,
 				494F2B642629E7C90068AF0A /* AuthViewController.swift */,
-				492A997F262B647700F41931 /* PaymentViewController.swift */,
-				492A997D262B625A00F41931 /* XIB */,
+				492A998C262B7E8F00F41931 /* PaymentViewController.swift */,
 				494F2B662629E7C90068AF0A /* Main.storyboard */,
+				492A998B262B7E5700F41931 /* XIB */,
 				494F2B692629E7C90068AF0A /* Assets.xcassets */,
 				494F2B6B2629E7C90068AF0A /* LaunchScreen.storyboard */,
 				494F2B6E2629E7C90068AF0A /* Info.plist */,
@@ -167,9 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				494F2B6D2629E7C90068AF0A /* LaunchScreen.storyboard in Resources */,
+				492A9989262B7E5200F41931 /* PaymentViewCell.xib in Resources */,
 				494F2B6A2629E7C90068AF0A /* Assets.xcassets in Resources */,
 				494F2B682629E7C90068AF0A /* Main.storyboard in Resources */,
-				494F2B79262A0EED0068AF0A /* PaymentListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,10 +206,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				494F2B652629E7C90068AF0A /* AuthViewController.swift in Sources */,
+				492A9988262B7E5200F41931 /* PaymentViewCell.swift in Sources */,
+				492A998D262B7E8F00F41931 /* PaymentViewController.swift in Sources */,
 				494F2B612629E7C90068AF0A /* AppDelegate.swift in Sources */,
-				492A9980262B647700F41931 /* PaymentViewController.swift in Sources */,
 				494F2B632629E7C90068AF0A /* SceneDelegate.swift in Sources */,
-				494F2B78262A0EED0068AF0A /* PaymentListViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
