@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PaymentListViewController: UITableViewController
+class PaymentListViewCell: UITableViewController
 {
     override func viewDidLoad()
     {

@@ -14,9 +14,6 @@ class AuthViewController: UIViewController, UITextFieldDelegate
     var login = ""
     var password = ""
     
-    // MARK: - Outlets
-    
-    
     // MARK: - Life cycle
     override func viewDidLoad()
     {
@@ -43,11 +40,9 @@ extension AuthViewController
             if let response = response
             {
                 print(response)
-                print(self.login)
             }
             
             guard let data = data else {return}
-            print(data)
             
             do
             {
@@ -77,7 +72,6 @@ extension AuthViewController
             if let response = response
             {
                 print(response)
-                print(login, password)
             }
             
             guard let data = data else {return}
@@ -85,6 +79,7 @@ extension AuthViewController
             {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 print(json)
+                
             }
             catch
             {
