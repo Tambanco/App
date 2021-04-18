@@ -16,42 +16,47 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2M-nw-6Zv">
-                        <rect key="frame" x="10" y="10" width="36" height="21"/>
+                        <rect key="frame" x="10" y="10" width="90" height="21.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="QJE-bi-Nhx"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifs-LZ-V3y">
-                        <rect key="frame" x="56" y="9" width="38" height="23"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P03-3B-tmR">
-                        <rect key="frame" x="10" y="39" width="113" height="36"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P03-3B-tmR">
+                        <rect key="frame" x="10" y="41.5" width="120" height="36"/>
                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwK-tF-p6o">
-                        <rect key="frame" x="149" y="39" width="99" height="36"/>
+                        <rect key="frame" x="149" y="41.5" width="99" height="36"/>
                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifs-LZ-V3y">
+                        <rect key="frame" x="125" y="10.5" width="50" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="ziO-te-Zky"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="CwK-tF-p6o" firstAttribute="leading" secondItem="P03-3B-tmR" secondAttribute="trailing" constant="26" id="1wg-u6-RVk"/>
-                    <constraint firstItem="P03-3B-tmR" firstAttribute="top" secondItem="M2M-nw-6Zv" secondAttribute="bottom" constant="8" symbolic="YES" id="3Jy-AA-lyX"/>
-                    <constraint firstItem="P03-3B-tmR" firstAttribute="leading" secondItem="3Mp-6j-wgE" secondAttribute="leading" constant="10" id="AnA-P5-SVJ"/>
-                    <constraint firstItem="P03-3B-tmR" firstAttribute="leading" secondItem="M2M-nw-6Zv" secondAttribute="trailing" constant="-36" id="D0S-Ou-YL5"/>
-                    <constraint firstItem="Ifs-LZ-V3y" firstAttribute="leading" secondItem="M2M-nw-6Zv" secondAttribute="trailing" constant="10" id="S9o-Mz-ctW"/>
-                    <constraint firstItem="Ifs-LZ-V3y" firstAttribute="centerY" secondItem="M2M-nw-6Zv" secondAttribute="centerY" id="TRd-9Q-0g8"/>
-                    <constraint firstItem="CwK-tF-p6o" firstAttribute="leading" secondItem="Ifs-LZ-V3y" secondAttribute="trailing" constant="55" id="Tpp-W3-ULq"/>
-                    <constraint firstItem="M2M-nw-6Zv" firstAttribute="leading" secondItem="3Mp-6j-wgE" secondAttribute="leading" constant="10" id="bdC-VG-zyU"/>
-                    <constraint firstItem="M2M-nw-6Zv" firstAttribute="top" secondItem="3Mp-6j-wgE" secondAttribute="top" constant="10" id="e3D-8G-oDX"/>
-                    <constraint firstItem="CwK-tF-p6o" firstAttribute="centerY" secondItem="P03-3B-tmR" secondAttribute="centerY" id="s2L-yb-G2i"/>
-                    <constraint firstItem="Ifs-LZ-V3y" firstAttribute="top" secondItem="3Mp-6j-wgE" secondAttribute="top" constant="9" id="zI3-gl-5l9"/>
+                    <constraint firstItem="CwK-tF-p6o" firstAttribute="leading" secondItem="P03-3B-tmR" secondAttribute="trailing" constant="19" id="4vA-7o-J0i"/>
+                    <constraint firstItem="M2M-nw-6Zv" firstAttribute="top" secondItem="3Mp-6j-wgE" secondAttribute="top" constant="10" id="5kb-cp-84t"/>
+                    <constraint firstItem="Ifs-LZ-V3y" firstAttribute="centerY" secondItem="M2M-nw-6Zv" secondAttribute="centerY" id="A2W-N8-6qZ"/>
+                    <constraint firstItem="CwK-tF-p6o" firstAttribute="top" secondItem="Ifs-LZ-V3y" secondAttribute="bottom" constant="10.5" id="C8Y-uF-E0g"/>
+                    <constraint firstItem="Ifs-LZ-V3y" firstAttribute="top" secondItem="3Mp-6j-wgE" secondAttribute="top" constant="10.5" id="HRZ-WA-pDm"/>
+                    <constraint firstItem="P03-3B-tmR" firstAttribute="top" secondItem="M2M-nw-6Zv" secondAttribute="bottom" constant="10" id="NcG-WH-sYh"/>
+                    <constraint firstItem="P03-3B-tmR" firstAttribute="leading" secondItem="3Mp-6j-wgE" secondAttribute="leading" constant="10" id="QPE-tP-6je"/>
+                    <constraint firstItem="Ifs-LZ-V3y" firstAttribute="leading" secondItem="M2M-nw-6Zv" secondAttribute="trailing" constant="25" id="eWf-56-dkh"/>
+                    <constraint firstItem="M2M-nw-6Zv" firstAttribute="leading" secondItem="3Mp-6j-wgE" secondAttribute="leading" constant="10" id="gOL-7J-DeU"/>
+                    <constraint firstItem="CwK-tF-p6o" firstAttribute="centerY" secondItem="P03-3B-tmR" secondAttribute="centerY" id="ycD-pY-dvf"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
