@@ -33,14 +33,33 @@
                     <view key="view" contentMode="scaleToFill" id="0JI-Wt-XO8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9J5-8V-Eft">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="U2Q-tz-8kf" id="TVL-Ll-Blt"/>
+                                    <outlet property="delegate" destination="U2Q-tz-8kf" id="78p-Tz-FF4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wpT-Fg-DhS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wpT-Fg-DhS" firstAttribute="trailing" secondItem="9J5-8V-Eft" secondAttribute="trailing" id="89C-jL-051"/>
+                            <constraint firstItem="9J5-8V-Eft" firstAttribute="leading" secondItem="wpT-Fg-DhS" secondAttribute="leading" id="Xdg-k7-u1v"/>
+                            <constraint firstItem="9J5-8V-Eft" firstAttribute="bottom" secondItem="wpT-Fg-DhS" secondAttribute="bottom" constant="34" id="bZ0-4U-hYo"/>
+                            <constraint firstItem="9J5-8V-Eft" firstAttribute="top" secondItem="wpT-Fg-DhS" secondAttribute="top" id="uoh-Y4-Szj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eBv-c1-gjt"/>
+                    <connections>
+                        <outlet property="tblUsers" destination="9J5-8V-Eft" id="w1r-jl-5lj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKf-ZE-DlD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="124"/>
+            <point key="canvasLocation" x="1070.7692307692307" y="123.69668246445497"/>
         </scene>
     </scenes>
     <resources>
