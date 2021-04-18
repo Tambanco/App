@@ -79,7 +79,6 @@ extension AuthViewController
             {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 print(json)
-                
             }
             catch
             {
@@ -168,7 +167,6 @@ extension AuthViewController
         self.view.addSubview(passwordTextField)
     }
     
-    
     @objc func loginTextFieldDidChange(_ textField: UITextField)
     {
         guard textField.text != "" else
@@ -190,7 +188,6 @@ extension AuthViewController
         textField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
         password = textField.text ?? "text doesn't exist"
     }
-    
 }
 
     // MARK: - Button configurator

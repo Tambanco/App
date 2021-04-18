@@ -65,12 +65,6 @@ extension PaymentViewController
         navBar?.barTintColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
         navBar?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
-    
-    @objc func empty()
-    {
-        
-    }
-    
 }
 
 // MARK: - Bar button configurator
@@ -80,6 +74,11 @@ extension PaymentViewController
     {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(empty))
         navigationItem.rightBarButtonItem?.tintColor = .white
+    }
+    
+    @objc func empty()
+    {
+        
     }
 }
 
