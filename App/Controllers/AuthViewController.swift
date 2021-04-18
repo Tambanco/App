@@ -43,7 +43,6 @@ extension AuthViewController
             }
             
             guard let data = data else {return}
-            
             do
             {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])

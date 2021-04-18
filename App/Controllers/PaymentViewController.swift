@@ -46,7 +46,6 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentViewCell", for: indexPath) as! PaymentViewCell
             let dict = usersArray[indexPath.row]
-            
             cell.dataLabel.text = dict["data"]
             cell.timeLabel.text = dict["time"]
             cell.amountLabel.text = dict["amout"]
@@ -67,7 +66,7 @@ extension PaymentViewController
     }
 }
 
-// MARK: - Bar button configurator
+    // MARK: - Bar button configurator
 extension PaymentViewController
 {
     func configureNavLogoutButton()

@@ -57,6 +57,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		491775FF262CA4C8009B0C85 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				492A998C262B7E8F00F41931 /* PaymentViewController.swift */,
+				494F2B642629E7C90068AF0A /* AuthViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		49177600262CA500009B0C85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				494F2B662629E7C90068AF0A /* Main.storyboard */,
+				494F2B6B2629E7C90068AF0A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		492A998B262B7E5700F41931 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,12 +107,10 @@
 			children = (
 				494F2B602629E7C90068AF0A /* AppDelegate.swift */,
 				494F2B622629E7C90068AF0A /* SceneDelegate.swift */,
-				494F2B642629E7C90068AF0A /* AuthViewController.swift */,
-				492A998C262B7E8F00F41931 /* PaymentViewController.swift */,
-				494F2B662629E7C90068AF0A /* Main.storyboard */,
+				491775FF262CA4C8009B0C85 /* Controllers */,
+				49177600262CA500009B0C85 /* Views */,
 				492A998B262B7E5700F41931 /* XIB */,
 				494F2B692629E7C90068AF0A /* Assets.xcassets */,
-				494F2B6B2629E7C90068AF0A /* LaunchScreen.storyboard */,
 				494F2B6E2629E7C90068AF0A /* Info.plist */,
 			);
 			path = App;
