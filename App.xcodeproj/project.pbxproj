@@ -46,8 +46,8 @@
 		491775FF262CA4C8009B0C85 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				492A998C262B7E8F00F41931 /* PaymentViewController.swift */,
 				494F2B642629E7C90068AF0A /* AuthViewController.swift */,
+				492A998C262B7E8F00F41931 /* PaymentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

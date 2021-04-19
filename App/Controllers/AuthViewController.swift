@@ -13,6 +13,7 @@ class AuthViewController: UIViewController
     let basicURL = "http://82.202.204.94/api-test/"
     var login = ""
     var password = ""
+    var checkSuccess = false
     
     // MARK: - Life cycle
     override func viewDidLoad()
@@ -134,6 +135,7 @@ extension AuthViewController
             loginTextField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             loginTextField.clearButtonMode = .whileEditing
             loginTextField.autocorrectionType = .no
+            loginTextField.autocapitalizationType = .none
             loginTextField.keyboardType = .asciiCapable
             loginTextField.layer.borderWidth = 2
             loginTextField.layer.cornerRadius = cornerRadius
