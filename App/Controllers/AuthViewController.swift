@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class AuthViewController: UIViewController
 {
@@ -33,58 +34,22 @@ class AuthViewController: UIViewController
     // MARK: - Networking managers
 extension AuthViewController
 {
-    func makeGetRequest(url: String)
-    {
-        guard let url = URL(string: url) else {return}
-        let session = URLSession.shared
-        session.dataTask(with: url) { (data, response, error) in
-            if let response = response
-            {
-                print(response)
-            }
-            
-            guard let data = data else {return}
-            do
-            {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
-            }
-            catch
-            {
-                print(error)
-            }
-        } .resume()
-    }
-    
     func makePostRequest(url: String, login: String, password: String)
     {
         guard let url = URL(string: url) else {return}
         let parameters = ["login" : login, "password" : password]
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("12345", forHTTPHeaderField: "app-key")
-        request.addValue("1", forHTTPHeaderField: "v")
-        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {return}
-        request.httpBody = httpBody
-        
-        let session = URLSession.shared
-        session.dataTask(with: request) { (data, response, error) in
-            if let response = response
+        let headers: HTTPHeaders = ["app-key" : "12345", "v" : "1"]
+        AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { response in
+            switch response.result
             {
-                print(response)
+            case .success(let value):
+                
+                print(value)
+    
+            case .failure(let error):
+               print(error)
             }
-            
-            guard let data = data else {return}
-            do
-            {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
-            }
-            catch
-            {
-                print(error)
-            }
-        }.resume()
+        }
     }
 }
 
