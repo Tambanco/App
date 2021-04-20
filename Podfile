@@ -7,5 +7,6 @@ target 'App' do
 
   # Pods for App
 	pod 'Alamofire'
+	pod 'SwiftyJSON'
 
 end

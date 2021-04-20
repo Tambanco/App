@@ -15,6 +15,7 @@ class AuthViewController: UIViewController
     var login = ""
     var password = ""
     var checkSuccess = false
+    let token = ""
     
     // MARK: - Life cycle
     override func viewDidLoad()
@@ -44,7 +45,6 @@ extension AuthViewController
             {
             case .success(let value):
                 print(value)
-    
             case .failure(let error):
                print(error)
             }
@@ -184,7 +184,7 @@ extension AuthViewController
         self.view.endEditing(true)
         flashButton(sender)
         makePostRequest(url: basicURL, login: login, password: password)
-        performSegue(withIdentifier: "goToPaymentList", sender: [])
+        //performSegue(withIdentifier: "goToPaymentList", sender: [])
     }
 }
 
