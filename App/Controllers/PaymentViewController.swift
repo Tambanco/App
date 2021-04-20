@@ -9,11 +9,7 @@ import UIKit
 class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     // MARK: - Properties
-    var mockArray : Array =    [["data": "17.04.2021", "time": "09:20", "amout": "1200"],
-                                 ["data": "16.04.2021", "time": "11:40", "amout": "5600"],
-                                 ["data": "15.04.2021", "time": "02:30", "amout": "304"],
-                                 ["data": "14.04.2021", "time": "15:20", "amout": "1100"],
-                                ]
+    var paymentList: [Payments] = []
     
     // MARK: - Outlets
     @IBOutlet weak var tblUsers: UITableView!
@@ -33,7 +29,7 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: - UITableView delegate
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
         {
-            return mockArray.count
+            return paymentList.count
         }
         
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
@@ -45,10 +41,7 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentViewCell", for: indexPath) as! PaymentViewCell
-            let dict = mockArray[indexPath.row]
-            cell.dataLabel.text = dict["data"]
-            cell.timeLabel.text = dict["time"]
-            cell.amountLabel.text = dict["amout"]
+            cell.initialize(paymentList[indexPath.row])
             
             return cell
         }

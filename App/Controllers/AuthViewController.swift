@@ -41,7 +41,6 @@ extension AuthViewController
     {
         guard URL(string: basicURL) != nil else {return}
         let urlForLogin = String(basicURL + "login")
-        print(urlForLogin)
         let parameters = ["login" : login, "password" : password]
         let headers: HTTPHeaders = ["app-key" : "12345", "v" : "1"]
         AF.request(urlForLogin, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { [self] response in
@@ -49,9 +48,16 @@ extension AuthViewController
             {
             case .success(let value):
                 let json = JSON(value).dictionaryValue
-                //successResult = json["success"]?.boolValue
+                successResult = json["success"]?.boolValue ?? false
                 token = json["response"]?["token"].stringValue ?? "token is missing"
+                
+                guard successResult != false else
+                {
+                    return showAlert(alertText: "Login Failed", alertMessage: "Check your login data and try again")
+                }
                 getPaymentData(basicURL: basicURL, token: token)
+                performSegue(withIdentifier: "goToPaymentList", sender: [])
+                
             case .failure(let error):
                print(error)
             }
@@ -69,7 +75,6 @@ extension AuthViewController
             {
             case .success(let value):
                 let json = JSON(value)
-                print(json)
                 showPaymentsList(jsonData: json)
                 
             case .failure(let error):
@@ -79,7 +84,7 @@ extension AuthViewController
     }
 }
 
-// MARK: - Show payments list
+    // MARK: - Show payments list
 extension AuthViewController
 {
     func showPaymentsList(jsonData: JSON)
@@ -95,7 +100,7 @@ extension AuthViewController
     }
 }
 
-// MARK: - Parse JSON
+    // MARK: - Parse JSON
 extension AuthViewController
 {
     func parseJSON(paymentsList: [JSON])
@@ -240,7 +245,18 @@ extension AuthViewController
         self.view.endEditing(true)
         flashButton(sender)
         makePostRequest(basicURL: basicURL, login: login, password: password)
-        //performSegue(withIdentifier: "goToPaymentList", sender: [])
+        
+    }
+}
+
+    // MARK: - Passing data methods
+extension AuthViewController
+{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        guard segue.identifier == "goToPaymentList" else {return}
+        guard let destination = segue.destination as? PaymentViewController else {return}
+        destination.paymentList = payments
     }
 }
 
@@ -292,3 +308,13 @@ extension AuthViewController
     }
 }
 
+    // MARK: - Alert configurator
+extension UIViewController
+{
+    func showAlert(alertText : String, alertMessage : String)
+    {
+        let alert = UIAlertController(title: alertText, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+}

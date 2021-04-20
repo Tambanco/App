@@ -45,6 +45,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsS-3p-jeo">
+                        <rect key="frame" x="199" y="41" width="78" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="CwK-tF-p6o" firstAttribute="leading" secondItem="P03-3B-tmR" secondAttribute="trailing" constant="19" id="4vA-7o-J0i"/>
@@ -52,15 +58,19 @@
                     <constraint firstItem="Ifs-LZ-V3y" firstAttribute="centerY" secondItem="M2M-nw-6Zv" secondAttribute="centerY" id="A2W-N8-6qZ"/>
                     <constraint firstItem="CwK-tF-p6o" firstAttribute="top" secondItem="Ifs-LZ-V3y" secondAttribute="bottom" constant="10.5" id="C8Y-uF-E0g"/>
                     <constraint firstItem="Ifs-LZ-V3y" firstAttribute="top" secondItem="3Mp-6j-wgE" secondAttribute="top" constant="10.5" id="HRZ-WA-pDm"/>
+                    <constraint firstItem="rsS-3p-jeo" firstAttribute="top" secondItem="Ifs-LZ-V3y" secondAttribute="bottom" constant="10" id="HkS-7H-G0a"/>
                     <constraint firstItem="P03-3B-tmR" firstAttribute="top" secondItem="M2M-nw-6Zv" secondAttribute="bottom" constant="10" id="NcG-WH-sYh"/>
                     <constraint firstItem="P03-3B-tmR" firstAttribute="leading" secondItem="3Mp-6j-wgE" secondAttribute="leading" constant="10" id="QPE-tP-6je"/>
+                    <constraint firstItem="rsS-3p-jeo" firstAttribute="leading" secondItem="CwK-tF-p6o" secondAttribute="trailing" constant="21" id="eFO-9b-NJP"/>
                     <constraint firstItem="Ifs-LZ-V3y" firstAttribute="leading" secondItem="M2M-nw-6Zv" secondAttribute="trailing" constant="25" id="eWf-56-dkh"/>
                     <constraint firstItem="M2M-nw-6Zv" firstAttribute="leading" secondItem="3Mp-6j-wgE" secondAttribute="leading" constant="10" id="gOL-7J-DeU"/>
+                    <constraint firstItem="rsS-3p-jeo" firstAttribute="centerY" secondItem="CwK-tF-p6o" secondAttribute="centerY" id="t8O-UG-yGY"/>
                     <constraint firstItem="CwK-tF-p6o" firstAttribute="centerY" secondItem="P03-3B-tmR" secondAttribute="centerY" id="ycD-pY-dvf"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="amountLabel" destination="CwK-tF-p6o" id="o0G-rj-06A"/>
+                <outlet property="currencyLabel" destination="rsS-3p-jeo" id="frO-NQ-Dxb"/>
                 <outlet property="dataLabel" destination="M2M-nw-6Zv" id="yV1-T9-Kzr"/>
                 <outlet property="paymentLabel" destination="P03-3B-tmR" id="miu-Bl-TWn"/>
                 <outlet property="timeLabel" destination="Ifs-LZ-V3y" id="tGK-th-BBS"/>
