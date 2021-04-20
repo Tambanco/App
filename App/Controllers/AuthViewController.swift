@@ -17,6 +17,7 @@ class AuthViewController: UIViewController
     var password = ""
     var successResult = false
     var token = ""
+    var payments: [Payments] = []
     
     // MARK: - Life cycle
     override func viewDidLoad()
@@ -50,7 +51,6 @@ extension AuthViewController
                 let json = JSON(value).dictionaryValue
                 //successResult = json["success"]?.boolValue
                 token = json["response"]?["token"].stringValue ?? "token is missing"
-                
                 getPaymentData(basicURL: basicURL, token: token)
             case .failure(let error):
                print(error)
@@ -70,12 +70,42 @@ extension AuthViewController
             case .success(let value):
                 let json = JSON(value)
                 print(json)
+                showPaymentsList(jsonData: json)
                 
             case .failure(let error):
                print(error)
             }
         }
     }
+}
+
+// MARK: - Show payments list
+extension AuthViewController
+{
+    func showPaymentsList(jsonData: JSON)
+    {
+        if jsonData.exists()
+        {
+            let rawPaymentsList = jsonData["response"].arrayValue
+                if rawPaymentsList.count > 0
+                {
+                    parseJSON(paymentsList: rawPaymentsList)
+                }
+        }
+    }
+}
+
+// MARK: - Parse JSON
+extension AuthViewController
+{
+    func parseJSON(paymentsList: [JSON])
+    {
+        paymentsList.forEach( { payments.append( Payments(  currency: $0["currency"].string ?? "",
+                                                            created: $0["created"].string ?? "",
+                                                            desc: $0["desc"].string ?? "",
+                                                            amount: $0["amount"].string ?? "" )) })
+    }
+    
 }
 
     // MARK: - App name configurator
