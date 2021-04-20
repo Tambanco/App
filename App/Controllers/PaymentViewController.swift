@@ -47,25 +47,15 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
 }
 
-    // MARK: - Navigation bar configurator
-extension PaymentViewController
-{
-    func configureNavBar()
-    {
-        let navBar = navigationController?.navigationBar
-        navigationItem.title = "Payments"
-        navBar?.barTintColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
-        navBar?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-    }
-}
+   
 
     // MARK: - Bar button configurator
 extension PaymentViewController
 {
     func configureNavLogoutButton()
     {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(empty))
-        navigationItem.rightBarButtonItem?.tintColor = .white
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(empty))
+        navigationItem.leftBarButtonItem?.tintColor = .white
     }
     
     @objc func empty()

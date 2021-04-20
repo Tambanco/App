@@ -18,6 +18,14 @@
 		494F2B6A2629E7C90068AF0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B692629E7C90068AF0A /* Assets.xcassets */; };
 		494F2B6D2629E7C90068AF0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B6B2629E7C90068AF0A /* LaunchScreen.storyboard */; };
 		49AFC42D262EC93E001D514F /* Payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC42C262EC93E001D514F /* Payments.swift */; };
+		49AFC433262F1EE4001D514F /* Navigation bar configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC432262F1EE4001D514F /* Navigation bar configurator.swift */; };
+		49AFC438262F1F69001D514F /* Label configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC437262F1F69001D514F /* Label configurator.swift */; };
+		49AFC43B262F1FB9001D514F /* Button configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC43A262F1FB9001D514F /* Button configurator.swift */; };
+		49AFC43E262F1FE1001D514F /* Image configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC43D262F1FE1001D514F /* Image configurator.swift */; };
+		49AFC441262F2007001D514F /* App name configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC440262F2007001D514F /* App name configurator.swift */; };
+		49AFC444262F2047001D514F /* Animation methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC443262F2047001D514F /* Animation methods.swift */; };
+		49AFC447262F2070001D514F /* Dismiss keyboard methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC446262F2070001D514F /* Dismiss keyboard methods.swift */; };
+		49AFC44A262F2098001D514F /* Alert configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC449262F2098001D514F /* Alert configurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +41,14 @@
 		494F2B6C2629E7C90068AF0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494F2B6E2629E7C90068AF0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49AFC42C262EC93E001D514F /* Payments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payments.swift; sourceTree = "<group>"; };
+		49AFC432262F1EE4001D514F /* Navigation bar configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation bar configurator.swift"; sourceTree = "<group>"; };
+		49AFC437262F1F69001D514F /* Label configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label configurator.swift"; sourceTree = "<group>"; };
+		49AFC43A262F1FB9001D514F /* Button configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button configurator.swift"; sourceTree = "<group>"; };
+		49AFC43D262F1FE1001D514F /* Image configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image configurator.swift"; sourceTree = "<group>"; };
+		49AFC440262F2007001D514F /* App name configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App name configurator.swift"; sourceTree = "<group>"; };
+		49AFC443262F2047001D514F /* Animation methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation methods.swift"; sourceTree = "<group>"; };
+		49AFC446262F2070001D514F /* Dismiss keyboard methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dismiss keyboard methods.swift"; sourceTree = "<group>"; };
+		49AFC449262F2098001D514F /* Alert configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert configurator.swift"; sourceTree = "<group>"; };
 		C4ED0E307814A18CBDD261C7 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D919B0C332D9607222B38C74 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		FE150EED7311A407E3925327 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +131,7 @@
 				492A998B262B7E5700F41931 /* XIB */,
 				494F2B692629E7C90068AF0A /* Assets.xcassets */,
 				494F2B6E2629E7C90068AF0A /* Info.plist */,
+				49AFC435262F1EE8001D514F /* Extensions */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -125,6 +142,21 @@
 				49AFC42C262EC93E001D514F /* Payments.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		49AFC435262F1EE8001D514F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				49AFC432262F1EE4001D514F /* Navigation bar configurator.swift */,
+				49AFC437262F1F69001D514F /* Label configurator.swift */,
+				49AFC43A262F1FB9001D514F /* Button configurator.swift */,
+				49AFC43D262F1FE1001D514F /* Image configurator.swift */,
+				49AFC440262F2007001D514F /* App name configurator.swift */,
+				49AFC443262F2047001D514F /* Animation methods.swift */,
+				49AFC446262F2070001D514F /* Dismiss keyboard methods.swift */,
+				49AFC449262F2098001D514F /* Alert configurator.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F39950E9B4DD710FAAE83E65 /* Frameworks */ = {
@@ -251,10 +283,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				49AFC42D262EC93E001D514F /* Payments.swift in Sources */,
+				49AFC43E262F1FE1001D514F /* Image configurator.swift in Sources */,
+				49AFC444262F2047001D514F /* Animation methods.swift in Sources */,
+				49AFC433262F1EE4001D514F /* Navigation bar configurator.swift in Sources */,
 				494F2B652629E7C90068AF0A /* AuthViewController.swift in Sources */,
 				492A9988262B7E5200F41931 /* PaymentViewCell.swift in Sources */,
+				49AFC44A262F2098001D514F /* Alert configurator.swift in Sources */,
 				492A998D262B7E8F00F41931 /* PaymentViewController.swift in Sources */,
+				49AFC43B262F1FB9001D514F /* Button configurator.swift in Sources */,
+				49AFC441262F2007001D514F /* App name configurator.swift in Sources */,
+				49AFC447262F2070001D514F /* Dismiss keyboard methods.swift in Sources */,
 				494F2B612629E7C90068AF0A /* AppDelegate.swift in Sources */,
+				49AFC438262F1F69001D514F /* Label configurator.swift in Sources */,
 				494F2B632629E7C90068AF0A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
