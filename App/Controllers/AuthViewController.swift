@@ -7,15 +7,16 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class AuthViewController: UIViewController
 {
     // MARK: - Properties
-    let basicURL = "http://82.202.204.94/api-test/login"
+    let basicURL = "http://82.202.204.94/api-test/"
     var login = ""
     var password = ""
-    var checkSuccess = false
-    let token = ""
+    var successResult = false
+    var token = ""
     
     // MARK: - Life cycle
     override func viewDidLoad()
@@ -35,16 +36,41 @@ class AuthViewController: UIViewController
     // MARK: - Networking managers
 extension AuthViewController
 {
-    func makePostRequest(url: String, login: String, password: String)
+    func makePostRequest(basicURL: String, login: String, password: String)
     {
-        guard let url = URL(string: url) else {return}
+        guard URL(string: basicURL) != nil else {return}
+        let urlForLogin = String(basicURL + "login")
+        print(urlForLogin)
         let parameters = ["login" : login, "password" : password]
         let headers: HTTPHeaders = ["app-key" : "12345", "v" : "1"]
-        AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { response in
+        AF.request(urlForLogin, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { [self] response in
             switch response.result
             {
             case .success(let value):
-                print(value)
+                let json = JSON(value).dictionaryValue
+                //successResult = json["success"]?.boolValue
+                token = json["response"]?["token"].stringValue ?? "token is missing"
+                
+                getPaymentData(basicURL: basicURL, token: token)
+            case .failure(let error):
+               print(error)
+            }
+        }
+    }
+    
+    func getPaymentData(basicURL: String, token: String)
+    {
+        guard URL(string: basicURL) != nil else {return}
+        let urlForPayments = basicURL + "payments"
+        let parameters = ["token" : token]
+        let headers: HTTPHeaders = ["app-key" : "12345", "v" : "1"]
+        AF.request(urlForPayments, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { [self] response in
+            switch response.result
+            {
+            case .success(let value):
+                let json = JSON(value)
+                print(json)
+                
             case .failure(let error):
                print(error)
             }
@@ -183,7 +209,7 @@ extension AuthViewController
     {
         self.view.endEditing(true)
         flashButton(sender)
-        makePostRequest(url: basicURL, login: login, password: password)
+        makePostRequest(basicURL: basicURL, login: login, password: password)
         //performSegue(withIdentifier: "goToPaymentList", sender: [])
     }
 }
