@@ -22,7 +22,6 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         let nib = UINib.init(nibName: "PaymentViewCell", bundle: nil)
         self.tblUsers.register(nib, forCellReuseIdentifier: "PaymentViewCell")
         
-        configureNavBar()
     }
     
     // MARK: - UITableView delegate
