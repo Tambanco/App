@@ -8,15 +8,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentViewController" customModule="App" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentViewCell" rowHeight="118" id="U4a-p8-m8z" customClass="PaymentViewCell" customModule="App" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentViewCell" rowHeight="107" id="U4a-p8-m8z" customClass="PaymentViewCell" customModule="App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U4a-p8-m8z" id="3Mp-6j-wgE">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2M-nw-6Zv">
-                        <rect key="frame" x="10" y="10" width="90" height="22"/>
+                        <rect key="frame" x="10" y="10" width="90" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="90" id="QJE-bi-Nhx"/>
                         </constraints>
@@ -25,19 +25,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P03-3B-tmR">
-                        <rect key="frame" x="10" y="42" width="82" height="24"/>
+                        <rect key="frame" x="10" y="40.5" width="82" height="22.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwK-tF-p6o">
-                        <rect key="frame" x="10" y="76" width="67" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwK-tF-p6o">
+                        <rect key="frame" x="10" y="73" width="67" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifs-LZ-V3y">
-                        <rect key="frame" x="125" y="10.5" width="200" height="21"/>
+                        <rect key="frame" x="125" y="10.5" width="200" height="19.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="200" id="ziO-te-Zky"/>
                         </constraints>
@@ -46,7 +46,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsS-3p-jeo">
-                        <rect key="frame" x="101" y="76" width="78" height="24"/>
+                        <rect key="frame" x="101" y="73" width="78" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -63,6 +63,7 @@
                     <constraint firstItem="rsS-3p-jeo" firstAttribute="leading" secondItem="P03-3B-tmR" secondAttribute="trailing" constant="9" id="b8L-Mk-IUy"/>
                     <constraint firstItem="Ifs-LZ-V3y" firstAttribute="leading" secondItem="M2M-nw-6Zv" secondAttribute="trailing" constant="25" id="eWf-56-dkh"/>
                     <constraint firstItem="M2M-nw-6Zv" firstAttribute="leading" secondItem="3Mp-6j-wgE" secondAttribute="leading" constant="10" id="gOL-7J-DeU"/>
+                    <constraint firstAttribute="bottom" secondItem="CwK-tF-p6o" secondAttribute="bottom" constant="10" id="vsg-Jr-yQb"/>
                     <constraint firstItem="CwK-tF-p6o" firstAttribute="top" secondItem="P03-3B-tmR" secondAttribute="bottom" constant="10" id="woT-Hn-qEj"/>
                     <constraint firstItem="rsS-3p-jeo" firstAttribute="centerY" secondItem="CwK-tF-p6o" secondAttribute="centerY" id="x59-mX-laq"/>
                     <constraint firstItem="rsS-3p-jeo" firstAttribute="leading" secondItem="CwK-tF-p6o" secondAttribute="trailing" constant="24" id="y7e-Fo-qiC"/>
@@ -75,7 +76,7 @@
                 <outlet property="paymentLabel" destination="P03-3B-tmR" id="miu-Bl-TWn"/>
                 <outlet property="timeLabel" destination="Ifs-LZ-V3y" id="tGK-th-BBS"/>
             </connections>
-            <point key="canvasLocation" x="660.86956521739137" y="190.17857142857142"/>
+            <point key="canvasLocation" x="660.86956521739137" y="186.49553571428569"/>
         </tableViewCell>
     </objects>
 </document>

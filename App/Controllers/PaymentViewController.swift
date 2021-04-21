@@ -22,6 +22,8 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         let nib = UINib.init(nibName: "PaymentViewCell", bundle: nil)
         self.tblUsers.register(nib, forCellReuseIdentifier: "PaymentViewCell")
         
+        tableView.estimatedRowHeight = 68.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     // MARK: - UITableView delegate
