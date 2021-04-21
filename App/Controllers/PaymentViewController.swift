@@ -23,7 +23,6 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tblUsers.register(nib, forCellReuseIdentifier: "PaymentViewCell")
         
         configureNavBar()
-        configureNavLogoutButton()
     }
     
     // MARK: - UITableView delegate
@@ -49,19 +48,3 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
 }
-
-    // MARK: - Bar button configurator
-extension PaymentViewController
-{
-    func configureNavLogoutButton()
-    {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(empty))
-        navigationItem.leftBarButtonItem?.tintColor = .white
-    }
-    
-    @objc func empty()
-    {
-        
-    }
-}
-

@@ -20,7 +20,6 @@
 		494F2B6A2629E7C90068AF0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B692629E7C90068AF0A /* Assets.xcassets */; };
 		494F2B6D2629E7C90068AF0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494F2B6B2629E7C90068AF0A /* LaunchScreen.storyboard */; };
 		49AFC42D262EC93E001D514F /* Payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC42C262EC93E001D514F /* Payments.swift */; };
-		49AFC433262F1EE4001D514F /* Navigation bar configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC432262F1EE4001D514F /* Navigation bar configurator.swift */; };
 		49AFC438262F1F69001D514F /* Label configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC437262F1F69001D514F /* Label configurator.swift */; };
 		49AFC43B262F1FB9001D514F /* Button configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC43A262F1FB9001D514F /* Button configurator.swift */; };
 		49AFC43E262F1FE1001D514F /* Image configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC43D262F1FE1001D514F /* Image configurator.swift */; };
@@ -45,7 +44,6 @@
 		494F2B6C2629E7C90068AF0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494F2B6E2629E7C90068AF0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49AFC42C262EC93E001D514F /* Payments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payments.swift; sourceTree = "<group>"; };
-		49AFC432262F1EE4001D514F /* Navigation bar configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation bar configurator.swift"; sourceTree = "<group>"; };
 		49AFC437262F1F69001D514F /* Label configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label configurator.swift"; sourceTree = "<group>"; };
 		49AFC43A262F1FB9001D514F /* Button configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button configurator.swift"; sourceTree = "<group>"; };
 		49AFC43D262F1FE1001D514F /* Image configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image configurator.swift"; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 		49AFC435262F1EE8001D514F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				49AFC432262F1EE4001D514F /* Navigation bar configurator.swift */,
 				49AFC437262F1F69001D514F /* Label configurator.swift */,
 				49AFC43A262F1FB9001D514F /* Button configurator.swift */,
 				49AFC43D262F1FE1001D514F /* Image configurator.swift */,
@@ -292,7 +289,6 @@
 				49AFC43E262F1FE1001D514F /* Image configurator.swift in Sources */,
 				4919974C2630AA7F006A2BA9 /* Date converter.swift in Sources */,
 				49AFC444262F2047001D514F /* Animation methods.swift in Sources */,
-				49AFC433262F1EE4001D514F /* Navigation bar configurator.swift in Sources */,
 				494F2B652629E7C90068AF0A /* AuthViewController.swift in Sources */,
 				4919974F2630ABF9006A2BA9 /* Time converter.swift in Sources */,
 				492A9988262B7E5200F41931 /* PaymentViewCell.swift in Sources */,
