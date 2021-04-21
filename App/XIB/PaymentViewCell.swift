@@ -33,21 +33,9 @@ extension PaymentViewCell
     func initialize(_ payments: Payments)
     {
         dataLabel.text = dateConverter(payments.created)
-        timeLabel.text = String(payments.created)
+        timeLabel.text = timeConverter((payments.created))
         paymentLabel.text = payments.desc
         amountLabel.text = String(payments.amount)
         currencyLabel.text = payments.currency
-    }
-}
-
-// MARK: - Date converter
-extension PaymentViewCell
-{
-    func dateConverter(_ inputTimeStamp: Double) -> String
-    {
-        let date = Date(timeIntervalSince1970: inputTimeStamp)
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yy"
-        return formatter.string(from: date)
     }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2D9B3DC94BD0C73BB7830FB5 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4ED0E307814A18CBDD261C7 /* Pods_App.framework */; };
+		4919974C2630AA7F006A2BA9 /* Date converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919974B2630AA7F006A2BA9 /* Date converter.swift */; };
+		4919974F2630ABF9006A2BA9 /* Time converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919974E2630ABF9006A2BA9 /* Time converter.swift */; };
 		492A9988262B7E5200F41931 /* PaymentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A9986262B7E5200F41931 /* PaymentViewCell.swift */; };
 		492A9989262B7E5200F41931 /* PaymentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492A9987262B7E5200F41931 /* PaymentViewCell.xib */; };
 		492A998D262B7E8F00F41931 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A998C262B7E8F00F41931 /* PaymentViewController.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4919974B2630AA7F006A2BA9 /* Date converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date converter.swift"; sourceTree = "<group>"; };
+		4919974E2630ABF9006A2BA9 /* Time converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Time converter.swift"; sourceTree = "<group>"; };
 		492A9986262B7E5200F41931 /* PaymentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewCell.swift; sourceTree = "<group>"; };
 		492A9987262B7E5200F41931 /* PaymentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewCell.xib; sourceTree = "<group>"; };
 		492A998C262B7E8F00F41931 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				49AFC443262F2047001D514F /* Animation methods.swift */,
 				49AFC446262F2070001D514F /* Dismiss keyboard methods.swift */,
 				49AFC449262F2098001D514F /* Alert configurator.swift */,
+				4919974B2630AA7F006A2BA9 /* Date converter.swift */,
+				4919974E2630ABF9006A2BA9 /* Time converter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -284,9 +290,11 @@
 			files = (
 				49AFC42D262EC93E001D514F /* Payments.swift in Sources */,
 				49AFC43E262F1FE1001D514F /* Image configurator.swift in Sources */,
+				4919974C2630AA7F006A2BA9 /* Date converter.swift in Sources */,
 				49AFC444262F2047001D514F /* Animation methods.swift in Sources */,
 				49AFC433262F1EE4001D514F /* Navigation bar configurator.swift in Sources */,
 				494F2B652629E7C90068AF0A /* AuthViewController.swift in Sources */,
+				4919974F2630ABF9006A2BA9 /* Time converter.swift in Sources */,
 				492A9988262B7E5200F41931 /* PaymentViewCell.swift in Sources */,
 				49AFC44A262F2098001D514F /* Alert configurator.swift in Sources */,
 				492A998D262B7E8F00F41931 /* PaymentViewController.swift in Sources */,
