@@ -19,7 +19,7 @@ func elementAnimator(_ element: UIView)
     }
 }
 
-func flashButton(_ button: UIButton)
+func flashButtonAnimation(_ button: UIButton)
 {
     let flash = CABasicAnimation(keyPath: "opacity")
     flash.duration = 0.10

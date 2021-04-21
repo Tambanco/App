@@ -114,7 +114,6 @@ extension AuthViewController
         paymentVC.paymentList = payments
         paymentVC.modalPresentationStyle = .fullScreen
         present(paymentVC, animated: true, completion: nil)
-        print(payments)
     }
 }
     // MARK: - Passing data methods
@@ -123,7 +122,7 @@ extension AuthViewController
     @objc func buttonTapped(sender : UIButton)
     {
         self.view.endEditing(true)
-        flashButton(sender)
+        flashButtonAnimation(sender)
         makePostRequest(basicURL: basicURL, login: login, password: password)
     }
 }
