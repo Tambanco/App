@@ -27,27 +27,28 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     // MARK: - UITableView delegate
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-        {
-            return paymentList.count
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return paymentList.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-        {
-            return 100
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentViewCell", for: indexPath) as! PaymentViewCell
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
+        cell.selectedBackgroundView = backgroundView
+        cell.initialize(paymentList[indexPath.row])
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-        {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentViewCell", for: indexPath) as! PaymentViewCell
-            cell.initialize(paymentList[indexPath.row])
-            
-            return cell
-        }
+        return cell
+    }
 }
-
-   
 
     // MARK: - Bar button configurator
 extension PaymentViewController
