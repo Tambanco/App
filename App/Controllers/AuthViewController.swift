@@ -56,7 +56,7 @@ extension AuthViewController
                     return showAlert(alertText: "Login Failed", alertMessage: "Check your login data and try again")
                 }
                 getPaymentData(basicURL: basicURL, token: token)
-                performSegue(withIdentifier: "goToPaymentList", sender: [])
+                
                 
             case .failure(let error):
                print(error)
@@ -109,17 +109,21 @@ extension AuthViewController
                                                             created: $0["created"].string ?? "",
                                                             desc: $0["desc"].string ?? "",
                                                             amount: $0["amount"].string ?? "" )) })
+        
+        let paymentVC = storyboard?.instantiateViewController(identifier: "PaymentViewController") as! PaymentViewController
+        paymentVC.paymentList = payments
+        paymentVC.modalPresentationStyle = .fullScreen
+        present(paymentVC, animated: true, completion: nil)
     }
-    
 }
     // MARK: - Passing data methods
 extension AuthViewController
 {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    @objc func buttonTapped(sender : UIButton)
     {
-        guard segue.identifier == "goToPaymentList" else {return}
-        guard let destination = segue.destination as? PaymentViewController else {return}
-        destination.paymentList = payments
+        self.view.endEditing(true)
+        flashButton(sender)
+        makePostRequest(basicURL: basicURL, login: login, password: password)
     }
 }
 

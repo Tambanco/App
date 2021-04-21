@@ -10,6 +10,7 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
 {
     // MARK: - Properties
     var paymentList: [Payments] = []
+    var list: String = ""
     
     // MARK: - Outlets
     @IBOutlet weak var tblUsers: UITableView!
@@ -22,6 +23,8 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         let nib = UINib.init(nibName: "PaymentViewCell", bundle: nil)
         self.tblUsers.register(nib, forCellReuseIdentifier: "PaymentViewCell")
         
+        let paymentsArray = list
+        print(paymentsArray)
         configureNavBar()
         configureNavLogoutButton()
     }
