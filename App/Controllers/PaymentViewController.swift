@@ -10,7 +10,6 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
 {
     // MARK: - Properties
     var paymentList: [Payments] = []
-    var list: String = ""
     
     // MARK: - Outlets
     @IBOutlet weak var tblUsers: UITableView!
@@ -23,8 +22,6 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         let nib = UINib.init(nibName: "PaymentViewCell", bundle: nil)
         self.tblUsers.register(nib, forCellReuseIdentifier: "PaymentViewCell")
         
-        let paymentsArray = list
-        print(paymentsArray)
         configureNavBar()
         configureNavLogoutButton()
     }
@@ -37,7 +34,7 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
         {
-            return 70
+            return 100
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell

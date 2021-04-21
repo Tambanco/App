@@ -105,15 +105,16 @@ extension AuthViewController
 {
     func parseJSON(paymentsList: [JSON])
     {
-        paymentsList.forEach( { payments.append( Payments(  currency: $0["currency"].string ?? "",
-                                                            created: $0["created"].string ?? "",
-                                                            desc: $0["desc"].string ?? "",
-                                                            amount: $0["amount"].string ?? "" )) })
+        paymentsList.forEach( { payments.append( Payments(  currency: $0["currency"].string ?? " - ",
+                                                            created: $0["created"].double ?? 0,
+                                                            desc: $0["desc"].string ?? " - ",
+                                                            amount: $0["amount"].double ?? 0.0 )) })
         
         let paymentVC = storyboard?.instantiateViewController(identifier: "PaymentViewController") as! PaymentViewController
         paymentVC.paymentList = payments
         paymentVC.modalPresentationStyle = .fullScreen
         present(paymentVC, animated: true, completion: nil)
+        print(payments)
     }
 }
     // MARK: - Passing data methods

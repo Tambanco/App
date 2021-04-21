@@ -11,8 +11,8 @@ import UIKit
 struct Payments
 {
     let currency: String
-    let created: String
+    let created: Double
     let desc: String
-    let amount: String
+    let amount: Double
     
 }
