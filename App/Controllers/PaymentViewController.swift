@@ -21,9 +21,10 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let nib = UINib.init(nibName: "PaymentViewCell", bundle: nil)
         self.tblUsers.register(nib, forCellReuseIdentifier: "PaymentViewCell")
+    
+        tblUsers.estimatedRowHeight = 80
+        tblUsers.rowHeight = UITableView.automaticDimension
         
-        tableView.estimatedRowHeight = 68.0
-        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     // MARK: - UITableView delegate
@@ -34,7 +35,7 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 100
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -45,6 +46,11 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         backgroundView.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
         cell.selectedBackgroundView = backgroundView
         cell.initialize(paymentList[indexPath.row])
+        cell.dataLabel.preferredMaxLayoutWidth = tblUsers.bounds.width
+        cell.timeLabel.preferredMaxLayoutWidth = tblUsers.bounds.width
+        cell.paymentLabel.preferredMaxLayoutWidth = tblUsers.bounds.width
+        cell.amountLabel.preferredMaxLayoutWidth = tblUsers.bounds.width
+        cell.currencyLabel.preferredMaxLayoutWidth = tblUsers.bounds.width
         
         return cell
     }
