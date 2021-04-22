@@ -14,7 +14,7 @@ extension PaymentViewCell
     {
         let date = Date(timeIntervalSince1970: inputTimeStamp)
         let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
+        formatter.dateFormat = "HH:mm"
         return formatter.string(from: date)
     }
 }
