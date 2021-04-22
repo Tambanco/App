@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - Button configurator
+    // MARK: - Button configurator
 extension AuthViewController
 {
     func  configureButtons()

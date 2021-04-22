@@ -7,27 +7,27 @@
 
 import UIKit
 
-// MARK: - Dismiss keyboard methods
+    // MARK: - Dismiss keyboard methods
 extension AuthViewController
 {
-@objc func keyboardWillShow(notification: NSNotification)
-{
-    if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+    @objc func keyboardWillShow(notification: NSNotification)
     {
-        if self.view.frame.origin.y == 0
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         {
-            self.view.frame.origin.y -= keyboardSize.height
+            if self.view.frame.origin.y == 0
+            {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
         }
     }
-}
 
-@objc func keyboardWillHide(notification: NSNotification)
-{
-    if self.view.frame.origin.y != 0
+    @objc func keyboardWillHide(notification: NSNotification)
     {
-        self.view.frame.origin.y = 0
+        if self.view.frame.origin.y != 0
+        {
+            self.view.frame.origin.y = 0
+        }
     }
-}
 }
 
 

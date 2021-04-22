@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - Label configurator
+    // MARK: - Label configurator
 extension AuthViewController
 {
 func configureLabels()
@@ -59,24 +59,24 @@ func configureLabels()
 }
 
 @objc func loginTextFieldDidChange(_ textField: UITextField)
-{
-    guard textField.text != "" else
     {
-        return textField.layer.borderColor = #colorLiteral(red: 0.9882510304, green: 0.3398481607, blue: 0.01567719691, alpha: 1)
+        guard textField.text != "" else
+        {
+            return textField.layer.borderColor = #colorLiteral(red: 0.9882510304, green: 0.3398481607, blue: 0.01567719691, alpha: 1)
+        }
+        
+        textField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
+        login = textField.text ?? "text doesn't exist"
     }
-    
-    textField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
-    login = textField.text ?? "text doesn't exist"
-}
 
 @objc func  passwordTextFieldDidChange(_ textField: UITextField)
-{
-    guard textField.text != "" else
     {
-        return textField.layer.borderColor = #colorLiteral(red: 0.9882510304, green: 0.3398481607, blue: 0.01567719691, alpha: 1)
-    }
+        guard textField.text != "" else
+        {
+            return textField.layer.borderColor = #colorLiteral(red: 0.9882510304, green: 0.3398481607, blue: 0.01567719691, alpha: 1)
+        }
     
     textField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
     password = textField.text ?? "text doesn't exist"
-}
+    }
 }

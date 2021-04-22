@@ -27,6 +27,7 @@
 		49AFC444262F2047001D514F /* Animation methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC443262F2047001D514F /* Animation methods.swift */; };
 		49AFC447262F2070001D514F /* Dismiss keyboard methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC446262F2070001D514F /* Dismiss keyboard methods.swift */; };
 		49AFC44A262F2098001D514F /* Alert configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFC449262F2098001D514F /* Alert configurator.swift */; };
+		49C245DB26318D1700B1087F /* Logout button configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C245DA26318D1700B1087F /* Logout button configurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		49AFC443262F2047001D514F /* Animation methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation methods.swift"; sourceTree = "<group>"; };
 		49AFC446262F2070001D514F /* Dismiss keyboard methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dismiss keyboard methods.swift"; sourceTree = "<group>"; };
 		49AFC449262F2098001D514F /* Alert configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert configurator.swift"; sourceTree = "<group>"; };
+		49C245DA26318D1700B1087F /* Logout button configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logout button configurator.swift"; sourceTree = "<group>"; };
 		C4ED0E307814A18CBDD261C7 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D919B0C332D9607222B38C74 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		FE150EED7311A407E3925327 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				49AFC437262F1F69001D514F /* Label configurator.swift */,
 				49AFC43A262F1FB9001D514F /* Button configurator.swift */,
+				49C245DA26318D1700B1087F /* Logout button configurator.swift */,
 				49AFC43D262F1FE1001D514F /* Image configurator.swift */,
 				49AFC440262F2007001D514F /* App name configurator.swift */,
 				49AFC443262F2047001D514F /* Animation methods.swift */,
@@ -293,6 +296,7 @@
 				4919974F2630ABF9006A2BA9 /* Time converter.swift in Sources */,
 				492A9988262B7E5200F41931 /* PaymentViewCell.swift in Sources */,
 				49AFC44A262F2098001D514F /* Alert configurator.swift in Sources */,
+				49C245DB26318D1700B1087F /* Logout button configurator.swift in Sources */,
 				492A998D262B7E8F00F41931 /* PaymentViewController.swift in Sources */,
 				49AFC43B262F1FB9001D514F /* Button configurator.swift in Sources */,
 				49AFC441262F2007001D514F /* App name configurator.swift in Sources */,

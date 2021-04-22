@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - Date converter
+    // MARK: - Date converter
 extension PaymentViewCell
 {
     func dateConverter(_ inputTimeStamp: Double) -> String

@@ -12,12 +12,12 @@ import SwiftyJSON
 class AuthViewController: UIViewController
 {
     // MARK: - Properties
-    let basicURL = "http://82.202.204.94/api-test/"
-    var login = ""
-    var password = ""
-    var successResult = false
-    var token = ""
-    var payments: [Payments] = []
+    let basicURL                = "http://82.202.204.94/api-test/"
+    var login                   = ""
+    var password                = ""
+    var successResult           = false
+    var token                   = ""
+    var payments: [Payments]    = []
     
     // MARK: - Life cycle
     override func viewDidLoad()

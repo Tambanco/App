@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - Time converter
+    // MARK: - Time converter
 extension PaymentViewCell
 {
     func timeConverter(_ inputTimeStamp: Double) -> String
