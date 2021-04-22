@@ -25,6 +25,8 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         tblUsers.estimatedRowHeight = 80
         tblUsers.rowHeight = UITableView.automaticDimension
         
+        configureLogout()
+    
     }
     
     // MARK: - UITableView delegate
@@ -53,5 +55,28 @@ class PaymentViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.currencyLabel.preferredMaxLayoutWidth = tblUsers.bounds.width
         
         return cell
+    }
+}
+
+    // MARK: - Logout button configurator
+extension PaymentViewController
+{
+    func configureLogout()
+    {
+        let logoutButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+         logoutButton.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
+        logoutButton.layer.cornerRadius = 10
+         logoutButton.setTitle("Logout", for: .normal)
+         logoutButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+
+         self.view.addSubview(logoutButton)
+    }
+    
+    @objc func buttonAction(sender: UIButton!)
+    {
+
+        let authVC = storyboard?.instantiateViewController(identifier: "AuthViewController") as! AuthViewController
+        authVC.modalPresentationStyle = .fullScreen
+        present(authVC, animated: true, completion: nil)
     }
 }
